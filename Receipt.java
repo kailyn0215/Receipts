@@ -16,23 +16,36 @@ public class Receipt
 
         int numBread;
         double priceBread = 1.25;
-        String descBread = "Aged Moldy Bread";
+        String descBread = "Aged Moldy loaves of Bread";
 
         int numEscargot;
         double priceEscargot = 89.99;
-        String descEscargot = "Delicately Sizzled Escarcot";
+        String descEscargot = "Delicately Sizzled Escarcots";
 
         int numGarlic;
         double priceGarlic = 69.69;
-        String descGarlic = "Beautifully Stinky Garlic";
+        String descGarlic = "Beautifully Stinky Garlics";
 
         System.out.println("Welcome to my store!!! Please either buy something or get out :)");
         System.out.println("Please go through the prompts and enter how many of each item you would like to buy.");
         Scanner scan = new Scanner(System.in);
-        System.out.print("How many luxury clipped toenails would you like to buy? ($9.95 each) ");
-        toenail = scan.nextInt();
-        System.out.print("How many finely chopped ($9.95 each) ");
-        toenail = scan.nextInt();
+        System.out.print("How many " + descToenail + " would you like? ($" + priceToenail + " each) ");
+        numToenail = scan.nextInt();
+        System.out.print("How many " + descFingernail + " would you like? ($" + priceFingernail + " each) ");
+        numFingernail = scan.nextInt();
+        System.out.print("How many " + descBread + " would you like? ($" + priceBread + " each) ");
+        numBread = scan.nextInt();
+        System.out.print("How many " + descEscargot + " would you like? ($" + priceEscargot + " each) ");
+        numEscargot = scan.nextInt();
+        System.out.print("How many " + descGarlic + " would you like? ($" + priceGarlic + " each) ");
+        numGarlic = scan.nextInt();
 
+        for(int i = 0; i < 39; i++)
+        {
+            System.out.print("*");
+        }
+        System.out.println("*");
+
+        System.out.println("*   Thank you for shopping with us!    *");
     }
 }
