@@ -6,6 +6,8 @@ public class Receipt
 {
     public static void main(String[] args)
     {
+        int spaces;
+
         int numToenail;
         double priceToenail = 9.95;
         String descToenail = "Luxury Clipped Toenails";
@@ -46,6 +48,24 @@ public class Receipt
         }
         System.out.println("*");
 
+        if (numToenail > 0)
+        {
+            System.out.print("*");
+            for(int x = 0; x < 38; x++)
+            {
+                System.out.print(" ");
+            }
+            System.out.println("*");
+
+            System.out.print("*  " + numToenail + " " + descToenail + " (@ $" + priceToenail + " each)");
+            System.out.println("*")
+        }
+
         System.out.println("*   Thank you for shopping with us!    *");
+        for(int y = 0; y < 39; y++)
+        {
+            System.out.print("*");
+        }
+        System.out.println("*");
     }
 }
