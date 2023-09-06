@@ -57,8 +57,10 @@ public class Receipt
             }
             System.out.println("*");
 
-            System.out.print("*  " + numToenail + " " + descToenail + " (@ $" + priceToenail + " each)");
-            System.out.println("*")
+            System.out.print("*  " + numToenail + " " + descToenail + "           ");
+            System.out.print(" (@ $" + priceToenail + " each)");
+
+            System.out.println("*");
         }
 
         System.out.println("*   Thank you for shopping with us!    *");
