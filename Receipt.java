@@ -18,7 +18,7 @@ public class Receipt
 
         int numBread;
         double priceBread = 1.25;
-        String descBread = "Aged Moldy loaves of Bread";
+        String descBread = "Aged Moldy Bread";
 
         int numEscargot;
         double priceEscargot = 89.99;
@@ -50,6 +50,35 @@ public class Receipt
 
         if (numToenail > 0)
         {
+            double finToe = numToenail * priceToenail;
+            System.out.print("*");
+            for(int x = 0; x < 38; x++)
+            {
+                System.out.print(" ");
+            }
+            System.out.println("*");
+            if (numToenail < 10)
+            {
+                System.out.print("*  " + numToenail + " " + descToenail + "    $");
+            }
+            else if (numToenail < 100)
+            {
+                System.out.print("*  " + numToenail + " " + descToenail + "  $");
+            }
+            else if (numToenail > 100)
+            {
+                System.out.print("* " + numToenail + " " + descToenail + " $");
+            }
+            System.out.printf("%.2f", finToe);
+            System.out.println(" *");
+            System.out.print("*  ($" + priceToenail + " each)");
+
+            System.out.println("                        *");
+        }
+
+        if (numFingernail > 0)
+        {
+            double finFin = numFingernail * priceFingernail;
             System.out.print("*");
             for(int x = 0; x < 38; x++)
             {
@@ -57,12 +86,14 @@ public class Receipt
             }
             System.out.println("*");
 
-            System.out.println3
-            ("*  " + numToenail + " " + descToenail + "           *");
-            System.out.print("*  @ $" + priceToenail + " each");
+            System.out.println("*  " + numFingernail + " " + descFingernail + " $");
+            System.out.printf("%.2f", finFin);
+            System.out.println(" *");
+            System.out.print("*  ($" + priceFingernail + " each)");
 
-            System.out.println("*");
+            System.out.println("                        *");
         }
+
 
         System.out.print("*");
         for(int a = 0; a < 38; a++)
