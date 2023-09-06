@@ -57,13 +57,29 @@ public class Receipt
             }
             System.out.println("*");
 
-            System.out.print("*  " + numToenail + " " + descToenail + "           ");
-            System.out.print(" (@ $" + priceToenail + " each)");
+            System.out.println3
+            ("*  " + numToenail + " " + descToenail + "           *");
+            System.out.print("*  @ $" + priceToenail + " each");
 
             System.out.println("*");
         }
 
+        System.out.print("*");
+        for(int a = 0; a < 38; a++)
+        {
+            System.out.print(" ");
+        }
+        System.out.println("*");
+
         System.out.println("*   Thank you for shopping with us!    *");
+
+        System.out.print("*");
+        for(int b = 0; b < 38; b++)
+        {
+            System.out.print(" ");
+        }
+        System.out.println("*");
+
         for(int y = 0; y < 39; y++)
         {
             System.out.print("*");
