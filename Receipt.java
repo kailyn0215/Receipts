@@ -12,10 +12,6 @@ public class Receipt
         double priceToenail = 9.95;
         String descToenail = "Luxury Clipped Toenails";
 
-        int numFingernail;
-        double priceFingernail = 5.99;
-        String descFingernail = "Finely Chopped Fingernails";
-
         int numBread;
         double priceBread = 1.25;
         String descBread = "Aged Moldy Bread";
@@ -33,8 +29,6 @@ public class Receipt
         Scanner scan = new Scanner(System.in);
         System.out.print("How many " + descToenail + " would you like? ($" + priceToenail + " each) ");
         numToenail = scan.nextInt();
-        System.out.print("How many " + descFingernail + " would you like? ($" + priceFingernail + " each) ");
-        numFingernail = scan.nextInt();
         System.out.print("How many " + descBread + " would you like? ($" + priceBread + " each) ");
         numBread = scan.nextInt();
         System.out.print("How many " + descEscargot + " would you like? ($" + priceEscargot + " each) ");
@@ -57,39 +51,77 @@ public class Receipt
                 System.out.print(" ");
             }
             System.out.println("*");
-            if (numToenail < 10)
+            if (finToe < 10)
             {
                 System.out.print("*  " + numToenail + " " + descToenail + "    $");
             }
-            else if (numToenail < 100)
+            else if (finToe < 100)
             {
-                System.out.print("*  " + numToenail + " " + descToenail + "  $");
+                System.out.print("*  " + numToenail + " " + descToenail + "   $");
             }
-            else if (numToenail > 100)
+            else if (finToe >= 100)
             {
-                System.out.print("* " + numToenail + " " + descToenail + " $");
+                System.out.print("* " + numToenail + " " + descToenail + "  $");
             }
             System.out.printf("%.2f", finToe);
-            System.out.println(" *");
+            System.out.println("  *");
             System.out.print("*  ($" + priceToenail + " each)");
 
             System.out.println("                        *");
         }
 
-        if (numFingernail > 0)
+        if (numBread > 0)
         {
-            double finFin = numFingernail * priceFingernail;
+            double finBread = numBread * priceBread;
             System.out.print("*");
             for(int x = 0; x < 38; x++)
             {
                 System.out.print(" ");
             }
             System.out.println("*");
+            if (finBread < 10)
+            {
+                System.out.print("*  " + numBread + " " + descBread + "           $");
+            }
+            else if (finBread < 100)
+            {
+                System.out.print("*  " + numBread + " " + descBread + "         $");
+            }
+            else if (finBread >= 100)
+            {
+                System.out.print("*  " + numBread + " " + descBread + "       $");
+            }
+            System.out.printf("%.2f", finBread);
+            System.out.println("  *");
+            System.out.print("*  ($" + priceBread + " each)");
 
-            System.out.println("*  " + numFingernail + " " + descFingernail + " $");
-            System.out.printf("%.2f", finFin);
-            System.out.println(" *");
-            System.out.print("*  ($" + priceFingernail + " each)");
+            System.out.println("                        *");
+        }
+
+        if (numEscargot > 0)
+        {
+            double finEsc = numEscargot * priceEscargot;
+            System.out.print("*");
+            for(int x = 0; x < 38; x++)
+            {
+                System.out.print(" ");
+            }
+            System.out.println("*");
+            if (finEsc < 10)
+            {
+                System.out.print("*  " + numBread + " " + descBread + "           $");
+            }
+            else if (finEsc < 100)
+            {
+                System.out.print("*  " + numBread + " " + descBread + "         $");
+            }
+            else if (finEsc >= 100)
+            {
+                System.out.print("*  " + numBread + " " + descBread + "       $");
+            }
+            System.out.printf("%.2f", finBread);
+            System.out.println("  *");
+            System.out.print("*  ($" + priceBread + " each)");
 
             System.out.println("                        *");
         }
